@@ -20,10 +20,10 @@ public class CommentService {
 	
 	
 	public List<Comment> getAllComments(){
-		List<Comment> Comments = new ArrayList<>();
+		List<Comment> comments = new ArrayList<Comment>();
 		commentRepository.findAll()
-		.forEach(Comments::add);
-		return Comments;
+		.forEach(comments::add);
+		return comments;
 	}
 	
 	public Comment getComment(int id) {
