@@ -1,9 +1,9 @@
-import {Component} from "@angular/core";
+import {Component, Input} from "@angular/core";
 import {User} from "../user/user.component";
 
 @Component({
   selector:'event-item',
-  template: './event-item.component.html'
+  templateUrl: './event-item.component.html'
 })
 export class EventItem{
   private id;
@@ -13,4 +13,5 @@ export class EventItem{
   private date;
   private organizer;
   participants: User[];
+  @Input() users:User[];
 }

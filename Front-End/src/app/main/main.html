@@ -1,6 +1,5 @@
-<header-menu></header-menu>
-<div *ngFor="let event of events">
-  <div class="card">
-    
+<div class="container-fluid" style="padding-top: 40px;">
+  <div class="row">
+    <event-item [users]="this.users"></event-item>
   </div>
 </div>
