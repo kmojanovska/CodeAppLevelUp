@@ -1,5 +1,7 @@
-<div class="container-fluid" style="padding-top: 40px;">
-  <div class="row">
-    <event-item [users]="this.users"></event-item>
-  </div>
-</div>
+
+
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let event of events">
+      <event-item [event]="event" style="padding: 20px"></event-item>
+  </mat-grid-tile>
+</mat-grid-list>

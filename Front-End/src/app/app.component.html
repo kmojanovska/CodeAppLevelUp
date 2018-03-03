@@ -19,7 +19,28 @@
   </li>
 </ul>
 -->
+<!--
 <header-menu></header-menu>
+
 <main-page></main-page>
+-->
+    <div class="row">
+        <div class="col-md-3">
+            <app-menu></app-menu>
+        </div>
+        <div class="col-md-9">
+            <main-page></main-page>
+        </div>
+    </div>
 
-
+<!--
+<div class="container">
+    <span *ngFor="let user of usersData" >
+        <h1>{{user.email}}</h1>
+    </span>
+    <span *ngFor="let comment1 of commentsData" >
+        <h1>{{comment1.comment}}</h1>
+        <h1>{{comment1.user.email}}</h1>
+    </span>
+</div>
+-->

@@ -10,6 +10,8 @@ import {User} from "./user/user.component";
 import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-browser/animations";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import 'hammerjs';
+
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -45,13 +47,22 @@ import {
   MatTooltipModule
 } from '@angular/material';
 import {CdkTableModule} from "@angular/cdk/table";
+import {EventService} from "./services/eventService";
+import {UserService} from "./services/userService";
+import {CommentService} from "./services/commentService";
+import { MenuComponent } from './menu/menu.component';
+import {Routes} from "@angular/router";
+import { EventsDisplayComponent } from './events-display/events-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     Main,
-    EventItem
+    EventItem,
+    MenuComponent,
+    EventsDisplayComponent
+
 
   ],
   imports: [
@@ -130,7 +141,9 @@ import {CdkTableModule} from "@angular/cdk/table";
     MatToolbarModule,
     MatTooltipModule
   ],
-  providers: [    HttpClient],
+  providers: [    HttpClient, EventService, UserService, CommentService
+
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })

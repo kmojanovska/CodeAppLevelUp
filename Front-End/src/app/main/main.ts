@@ -6,16 +6,17 @@ import {Observable} from "rxjs/Observable";
 
 @Component({
   selector:'main-page',
-  templateUrl:'./main.html'
+  templateUrl:'./main.html',
+  styleUrls: ['./main.css']
 })
 export class Main implements OnInit{
-  events: Observable<String[]>;
-  users: User[];
+  events: Object[];
+  users: Object[];
   constructor(private eventService:EventService )
   {
   }
   ngOnInit()
   {
-    this.events=this.eventService.getEvents();
+    this.eventService.getEvents().subscribe(event => this.events = event);
   }
 }
